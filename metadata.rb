@@ -18,3 +18,8 @@ chef_version '>= 14.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/node03'
+depends 'nodejs', '~> 6.0.0'
+depends 'apt'
+
+# Install mongodb
+# depends 'mongodb', '~> 0.16.2'

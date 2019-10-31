@@ -14,3 +14,7 @@ run_list 'node03::default'
 
 # Specify a custom source for a single cookbook:
 cookbook 'node03', path: '.'
+
+
+# Import nodejs from supermarket
+# cookbook 'nodejs', '~> 6.0.0', :supermarket
