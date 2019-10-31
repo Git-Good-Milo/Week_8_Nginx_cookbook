@@ -1,0 +1,34 @@
+---
+driver:
+  name: ec2
+  region: eu-west-1
+  require_chef_omnibus: true
+  instance_type: t2.micro
+  #Subnet
+  subnet_id: subnet-018e9e3078d34571c
+  associate_public_ip: true
+  aws_ssh_key_id: fp-eng-42-class
+
+  transport:
+    #use our key from machine to access the test machine
+    #ssh_key: ~/.ssh/me-vj-ssh.pem
+
+# provisioner:
+#   name: chef_zero
+
+verifier:
+  name: inspec
+
+# Platforms
+platforms:
+  - name: ubuntu-16.04
+    driver:
+      box: ubuntu/xenial64
+
+# Suites
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
