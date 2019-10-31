@@ -6,11 +6,11 @@
 
 require 'spec_helper'
 
-# describe 'node03::default' do
-#   context 'When all attributes are default, on Ubuntu 16.04' do
-#     # for a complete list of available platforms and versions see:
-#     # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
-#     platform 'ubuntu', '16.04'
+describe 'node03::default' do
+  # context 'When all attributes are default, on Ubuntu 16.04' do
+  #   # for a complete list of available platforms and versions see:
+  #   # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
+  #   platform 'ubuntu', '16.04'
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
@@ -75,5 +75,4 @@ require 'spec_helper'
     # end
 
 
-  end
 end
