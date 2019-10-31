@@ -18,7 +18,7 @@ package 'nginx'
 service 'nginx' do
   action [ :enable, :start ]
 end
-
+# Testing
 # template 'destination' do
 #   source 'name_file_in_templates.conf.erb'
 # end
